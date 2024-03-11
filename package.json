@@ -1,0 +1,25 @@
+{
+  "name": "funny-website",
+  "version": "0.0.1",
+  "description": "stupid thing on the internet for other silly clowns to gander at",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "me of course, who else",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@metalsmith/layouts": "^2.7.0",
+    "@metalsmith/markdown": "^1.10.0",
+    "jstransformer-handlebars": "^1.2.0",
+    "metalsmith": "^2.6.3"
+  },
+  "dependencies": {
+    "@fidian/metalsmith-serve": "^0.2.0",
+    "@metalsmith/permalinks": "^3.0.1",
+    "metalsmith-ancestry": "^1.6.1",
+    "metalsmith-html-relative": "^2.0.1"
+  }
+}
