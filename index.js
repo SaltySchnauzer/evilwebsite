@@ -8,13 +8,15 @@ import ancestry from "metalsmith-ancestry";
 import relative from "metalsmith-html-relative";
 import permalinks from "@metalsmith/permalinks";
 import serve from "@fidian/metalsmith-serve";
+import when from "metalsmith-if";
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-
+const isProduction = process.env.NODE_ENV == 'production';
 // Run Metalsmith in the current directory.
 // When the .build() method runs, this reads
 // and strips the frontmatter from each of our
 // source files and passes it on to the plugins.
+
 Metalsmith(__dirname)
     .clean(true)
     // Convert blathering blogposts into markdown
@@ -33,7 +35,7 @@ Metalsmith(__dirname)
                         // i reckon i'm just stupid but its been doing my head in for like two hours
     .use(layouts())
     .use(relative())
-    .use(serve())
+    .use(when(!isProduction, serve()))
 
     // And tell Metalsmith to fire it all off.
     .build(function(err, files) {
