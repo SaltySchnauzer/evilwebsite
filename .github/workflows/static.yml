@@ -27,9 +27,10 @@ jobs:
       - name: Build Node
         run: NODE_ENV=production node index.js
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: public
+         # Path of the directory containing the static assets.
+         path: build/
  
   deploy:
     needs: build
@@ -40,4 +41,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4.0.4
