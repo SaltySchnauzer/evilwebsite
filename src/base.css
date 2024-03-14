@@ -1,0 +1,14 @@
+h1 {
+    border-style: solid;
+    border-radius: 1em;
+    border-color: rgb(197, 147, 197);
+    background-color: thistle;
+    text-align: center;
+}
+body{
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: cornsilk;
+}
+  
