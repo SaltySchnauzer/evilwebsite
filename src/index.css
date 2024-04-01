@@ -11,9 +11,16 @@ mainpage {
     /*put some padding in here somehow - at the moment it offsets everything and it does my head in */
     /* give space to children */
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     justify-content: space-around;
+}
+top {
+    clip-path: inset(0 round 1em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "VCR_OSD";
 }
 buton {
     /* Eat all available space */
@@ -30,7 +37,7 @@ buton {
     align-items: center;
     text-align: center;
     /* make text look okay */
-    font-size: 2em;
+    font-size: 1.5em;
     color:hsla(0, 0%, 0%, 0.75);
 }
 /* make it go woosh */
@@ -41,8 +48,9 @@ buton:hover{
 }
 /* main thingy in the middle */
 .tv {
-    grid-area: 2 / 2 / 5 / 5;
-    scale: 0.9;
+    grid-area: 2 / 2 / 6 / 5;
+    scale: 0.93;
+    position: relative;
 }
 /* images actually scale properly to box (who cares about aspect ratio) */
 img {
@@ -52,8 +60,14 @@ img {
 /* image in the tv */
 .sprite{
     /* clip it a little outside so that way it doesn't just have blank gaps on the side */
-    scale: 1.2;
+    scale: 1;
     transition: scale 0.65s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
 }
 .sprite:hover{
     scale: 1.5 /* zoooom */

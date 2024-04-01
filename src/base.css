@@ -1,14 +1,68 @@
+@font-face {
+    font-family: "VCR_OSD";
+    src: url(./vcr_osd.ttf);
+}
+
 h1 {
-    border-style: solid;
+    border-style: none;
     border-radius: 1em;
-    border-color: rgb(197, 147, 197);
-    background-color: thistle;
+    background-color: rgba(216, 191, 216, 0.7);
     text-align: center;
+    margin: 1rem 20%;
 }
 body{
+    margin: 0;
     font-family: "Nanum Pen Script", cursive;
     font-weight: 400;
     font-style: normal;
-    background-color: cornsilk;
+    background-color: rgb(255, 248, 220);
+    font-size: 1.5em;
+    background-color: rgb(255, 248, 220);
+}
+topbit{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 1rem 1rem 1rem 2rem;
+    background-image: linear-gradient(180deg, rgba(255, 102, 0, 0.219) 90%,rgba(255, 102, 0, 0%));
+}
+topbit > h1 {
+    margin: 0 1rem;
+    background: linear-gradient(0deg, rgb(189, 119, 189), rgb(216, 169, 216));
+    rotate: 0.5deg;
+}
+vweep {
+    position: relative;
+    rotate: -2deg;
+    margin: auto 0;
+    padding: 0.5em;
+    cursor: grab;
+    text-align: center;
+    background-image: linear-gradient(
+        0deg,
+        rgb(100, 22, 173) 0%,
+        rgb(188, 117, 255) 70%,
+        rgb(209, 160, 255) 100%);
+    border-radius: 1em;
+    z-index: 1;
+}
+vweep::before{
+    border-radius: 1em;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1;
+    background-image: linear-gradient(
+        0deg,
+        rgb(119, 47, 185) 0%,
+        rgb(188, 117, 255) 40%,
+        rgb(232, 208, 255) 100%);
+}
+vweep:hover::before{
+    opacity: 1;
 }
   

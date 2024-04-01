@@ -1,5 +1,5 @@
 ---
-title: what the scallop i'm talking shit about somethin??
+title: what goes here? iunno
 description: something or other first markdown sheet go
 layout: default.hbs
 ---
