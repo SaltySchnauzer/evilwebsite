@@ -20,7 +20,9 @@
     "@fidian/metalsmith-serve": "^0.2.0",
     "@metalsmith/permalinks": "^3.0.1",
     "metalsmith-ancestry": "^1.6.1",
+    "metalsmith-discover-partials": "^0.1.2",
     "metalsmith-html-relative": "^2.0.1",
-    "metalsmith-if": "^1.0.0"
+    "metalsmith-if": "^1.0.0",
+    "metalsmith-rootpath": "^1.0.4"
   }
 }
