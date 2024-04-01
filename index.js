@@ -34,14 +34,16 @@ Metalsmith(__dirname)
     
     .use(permalinks())  // i'm not really sure what this does but it removes the trailing slash in the uri so good enough
 
-    // Change links into relative links
-    .use(relative())    // works for most links
+    // Add rootpath metadata
     .use(rootPath())    // covers edgecases for relative links (inside scripts/onclicks)
                         // must run before layouts
 
     // Formatting
-    .use(partials()) // adds in partials (must run before layouts)
-    .use(layouts()) // use templates to build website
+    .use(partials())    // adds in partials (must run before layouts)
+    .use(layouts())     // use templates to build website
+
+    
+    .use(relative())    // changes almost all links to relative links
 
     // Run a test server when it's not on github lol sorry github servers pre me finding out about environment variables
     .use(when(!isProduction, serve()))
