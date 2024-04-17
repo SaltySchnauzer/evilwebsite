@@ -7,23 +7,28 @@ layout: main.hbs
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
+    
     <mainpage>
-        <buton onclick="window.location.href='ramblings/the_first'" >the only other page on this website lol</buton>
-        <buton onclick="window.location.href='https://monkeinabox.github.io/maliciousSheepWebsite/'" >some silly site this other guy made</buton>
+        <buton onclick="window.location.href='./ramblings/the_first'" >the only other page on this website lol</buton>
+        <buton id="monke" onclick="window.location.href='https://monkeinabox.github.io/maliciousSheepWebsite/'" >some silly site this other guy made</buton>
         <buton>buton that doesn't work :/</buton>
         <buton>another brokey button</buton>
         <buton>another one</buton>
         <buton>surprise! this one doesn't work either!</buton>
         <buton>see previous button</buton>
-        <buton class = "tv">
-            <img class="sprite" src="https://media1.tenor.com/m/j3ule0laPGcAAAAC/super-bowl-despicable.gif">
-            <p style="background-color: rgba(255, 255, 255, 0.212); border-radius: 1em; padding: 0.5em; pointer-events: none;">this is temporary</p>
-        </buton>
+        <tv>
+            <canvas class = "sprite" id="screen_bg" style="z-index: 0;"></canvas>
+            <canvas class = "sprite" id="screen" style="z-index: 1;"></canvas>
+            <canvas class = "sprite" id="screen_fg" style="z-index: 2;"></canvas>
+        </tv>
         <top style="grid-area: 1 / 2 / 1 / 5">
             Something something this is a website
         </top>
-        <buton onclick="window.location.href='about'">why does this website exist??</buton>
+        <buton id="aboutme" onclick="window.location.href='about'">why does this website exist??</buton>
         <buton>shock.</buton>
         <buton>horror.</buton>
     </mainpage>
+    <img id="sprites" src="./sprites/tv.png" style="display:none">
+    <img id="bg" src="./sprites/tv_base.png" style="display:none">
+    <script src="./animation.js"></script>
 </body>

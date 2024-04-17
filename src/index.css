@@ -3,6 +3,7 @@ body{
     height: 100%;
     overflow: hidden;
     margin: 0;
+    background-color: rgb(59, 59, 59);
 }
 mainpage {
     /* fill the page */
@@ -27,7 +28,7 @@ buton {
     height: 100%;
     width: 100%;
     cursor: grab;       /* hehe this is a funny cursor */
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     transition: background-color 0.45s, scale 0.5s, color 0.4s;     /* make it look cool on moving */
     scale: 0.85;        /* padding if it was good*/
     clip-path: inset(0 round 1em);      /* stops stuff from inside from clipping into other tables */
@@ -37,20 +38,24 @@ buton {
     align-items: center;
     text-align: center;
     /* make text look okay */
-    font-size: 1.5em;
+    font-size: 2.5vw;
     color:hsla(0, 0%, 0%, 0.75);
 }
 /* make it go woosh */
 buton:hover{
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.5);
     scale: 1;
     color: hsla(0, 0%, 0%, 0.9);
 }
 /* main thingy in the middle */
-.tv {
+tv {
     grid-area: 2 / 2 / 6 / 5;
-    scale: 0.93;
+    scale: 0.98;
     position: relative;
+    height: 100%;
+    width: 100%;
+    clip-path: inset(0 round 1em);
+    image-rendering: pixelated;
 }
 /* images actually scale properly to box (who cares about aspect ratio) */
 img {
@@ -59,17 +64,14 @@ img {
 }
 /* image in the tv */
 .sprite{
-    /* clip it a little outside so that way it doesn't just have blank gaps on the side */
     scale: 1;
-    transition: scale 0.65s;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: -1;
-}
-.sprite:hover{
-    scale: 1.5 /* zoooom */
+    width:100%;
+    height:auto;
 }
 /* perhaps add text padding? don't want to add p divs to everything because im like that so i'll bench this for later */
