@@ -1,77 +1,23 @@
 body{
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-    margin: 0;
-    background-color: rgb(59, 59, 59);
+    background-color: black;
 }
-mainpage {
-    /* fill the page */
-    width: 100%;
-    height: 100%;
-    /*put some padding in here somehow - at the moment it offsets everything and it does my head in */
-    /* give space to children */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    justify-content: space-around;
-}
-top {
-    clip-path: inset(0 round 1em);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "VCR_OSD";
-}
-buton {
-    /* Eat all available space */
-    height: 100%;
-    width: 100%;
-    cursor: grab;       /* hehe this is a funny cursor */
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.45s, scale 0.5s, color 0.4s;     /* make it look cool on moving */
-    scale: 0.85;        /* padding if it was good*/
-    clip-path: inset(0 round 1em);      /* stops stuff from inside from clipping into other tables */
-    /* center stuff inside */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* make text look okay */
-    font-size: 2.5vw;
-    color:hsla(0, 0%, 0%, 0.75);
-}
-/* make it go woosh */
-buton:hover{
-    background-color: rgba(255, 255, 255, 0.5);
-    scale: 1;
-    color: hsla(0, 0%, 0%, 0.9);
-}
-/* main thingy in the middle */
-tv {
-    grid-area: 2 / 2 / 6 / 5;
-    scale: 0.98;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    clip-path: inset(0 round 1em);
-    image-rendering: pixelated;
-}
-/* images actually scale properly to box (who cares about aspect ratio) */
-img {
-    width: 100%;
-    height: 100%;
-}
-/* image in the tv */
-.sprite{
-    scale: 1;
+canvas{
+    width:100%;
     position: absolute;
-    top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
-    width:100%;
-    height:auto;
 }
-/* perhaps add text padding? don't want to add p divs to everything because im like that so i'll bench this for later */
+butonbox{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    background-color: rgba(1, 1, 1 0.15);
+}
+buton{
+    font-family: "VCR_OSD";
+    color: white;
+    cursor: grab;
+}
